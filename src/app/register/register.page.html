@@ -7,7 +7,7 @@
 
 <ion-content padding>
   <ion-card-header>Commençons par la première étape !</ion-card-header>
-  <ion-card-content>
+  <ion-card-content #form>
     <ion-item>
       <ion-input placeholder="Nom complet"></ion-input>
     </ion-item>
@@ -20,8 +20,8 @@
     <ion-item>
       <ion-input placeholder="Confirmation du mot de passe"></ion-input>
     </ion-item>
-    <ion-item>
-      <ion-button expand="full" size="large">Etape suivant</ion-button>
+    <ion-item lines="none">
+      <ion-button expand="full" size="large" (click)="go()"><ion-icon size="large" name="arrow-round-forward"></ion-icon></ion-button>
     </ion-item>
   </ion-card-content>
 </ion-content>
