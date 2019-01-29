@@ -1,21 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>
+            Accueil
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
 <ion-content>
-      <ion-menu></ion-menu>
-      <ion-card-header>
-        <ion-card-title text-center>HOME</ion-card-title>
-        <ion-card-subtitle text-center>Start taking care of yourself now</ion-card-subtitle>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-item>
-          <ion-input placeholder="Email"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input placeholder="Mot de passe"></ion-input>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-button expand="full" size="large">Connexion</ion-button>
-        </ion-item>
-        <ion-item lines="none">
-          <ion-button expand="full" size="large">S'inscrire</ion-button>
-        </ion-item>
-      </ion-card-content>
+    <ion-card>
+        <ion-card-header>
+            Chart
+        </ion-card-header>
+        <ion-card-content>
+            <canvas #chartCanvas></canvas>
+        </ion-card-content>
+    </ion-card>
+    <ion-card>
+        <ion-card-header>
+            Chart2
+        </ion-card-header>
+        <ion-card-content>
+            <canvas #chartCanvas2></canvas>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
