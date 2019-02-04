@@ -10,20 +10,39 @@
 </ion-header>
 
 <ion-content>
-    <ion-card>
-        <ion-card-header>
-            Chart
-        </ion-card-header>
-        <ion-card-content>
-            <canvas #chartCanvas></canvas>
-        </ion-card-content>
-    </ion-card>
-    <ion-card>
-        <ion-card-header>
-            Chart2
-        </ion-card-header>
-        <ion-card-content>
-            <canvas #chartCanvas2></canvas>
-        </ion-card-content>
-    </ion-card>
+    <mat-card margin >
+        <circle-progress
+                [percent]="85"
+                [radius]="50"
+                [outerStrokeWidth]="10"
+                [outerStrokeColor]="'#4882c2'"
+                [innerStrokeColor]="'#e7e8ea'"
+                [animation]="true"
+                [animationDuration]="300"
+        ></circle-progress>
+    </mat-card>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Aliments
+                </mat-panel-title>
+                <mat-panel-description>
+                    200kcal
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+
+            <mat-form-field>
+                <input matInput type="search" placeholder="Choisir un aliment" />
+            </mat-form-field>
+            <mat-chip-list>
+                <mat-chip matChipRemove>test</mat-chip>
+                <mat-chip matChipRemove>test2</mat-chip>
+            </mat-chip-list>
+        </mat-expansion-panel>
+    <mat-card margin >
+        1000 pas
+    </mat-card>
+    <mat-card margin >
+
+    </mat-card>
 </ion-content>
