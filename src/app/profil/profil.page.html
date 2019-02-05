@@ -1,14 +1,19 @@
-<ion-header>
-  <ion-toolbar>
+<ion-header no-border>
+  <ion-toolbar style="background-color: blue">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>
-      Profil
-    </ion-title>
   </ion-toolbar>
+  <mat-card class=".mat-elevation-z0">
+    <mat-card-title text-center>Votre profil</mat-card-title>
+    <mat-card-subtitle text-center>Editez vos informations ici</mat-card-subtitle>
+  </mat-card>
 </ion-header>
 
 <ion-content padding>
-
+  <mat-card>
+    <mat-form-field>
+      <input matInput type="text" placeholder="adresse email actuelle" />
+    </mat-form-field>
+  </mat-card>
 </ion-content>

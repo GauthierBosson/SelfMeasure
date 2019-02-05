@@ -11,7 +11,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { MatChipsModule} from '@angular/material/chips';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   imports: [
@@ -29,6 +30,7 @@ import { MatChipsModule} from '@angular/material/chips';
     MatIconModule,
     MatExpansionModule,
     MatChipsModule,
+    MatButtonModule,
     NgCircleProgressModule.forRoot({
       // set defaults here
       radius: 60,

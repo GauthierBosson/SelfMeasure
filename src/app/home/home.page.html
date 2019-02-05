@@ -34,15 +34,33 @@
             <mat-form-field>
                 <input matInput type="search" placeholder="Choisir un aliment" />
             </mat-form-field>
+            <button mat-icon-button><mat-icon>add</mat-icon></button>
             <mat-chip-list>
-                <mat-chip matChipRemove>test</mat-chip>
-                <mat-chip matChipRemove>test2</mat-chip>
+                <mat-chip matChipRemove>test<mat-icon matChipRemove>cancel</mat-icon></mat-chip>
+                <mat-chip matChipRemove>test2<mat-icon matChipRemove>cancel</mat-icon></mat-chip>
             </mat-chip-list>
         </mat-expansion-panel>
     <mat-card margin >
         1000 pas
     </mat-card>
-    <mat-card margin >
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    IMC actuel : 20
+                </mat-panel-title>
+                <mat-panel-description>
+                    IMC normal
+                </mat-panel-description>
+            </mat-expansion-panel-header>
 
-    </mat-card>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Choisir un aliment" />
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput type="text" placeholder="Choisir un aliment" />
+            </mat-form-field>
+            <ion-item lines="none">
+                <button mat-raised-button color="primary">Primary</button>
+            </ion-item>
+        </mat-expansion-panel>
 </ion-content>
