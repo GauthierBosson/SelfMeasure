@@ -5,14 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPage } from './login.page';
-
-import { MatInputModule} from '@angular/material/input';
+import { AddAlimentPage } from './add-aliment.page';
+import { MatCardModule } from '@angular/material';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginPage
+    component: AddAlimentPage
   }
 ];
 
@@ -21,9 +20,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes),
-    MatInputModule
+    MatCardModule,
+    RouterModule.forChild(routes)
   ],
-  declarations: [LoginPage]
+  declarations: [AddAlimentPage]
 })
-export class LoginPageModule {}
+export class AddAlimentPageModule {}

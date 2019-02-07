@@ -5,14 +5,14 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { LoginPage } from './login.page';
-
-import { MatInputModule} from '@angular/material/input';
+import { HistoricPage } from './historic.page';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
 
 const routes: Routes = [
   {
     path: '',
-    component: LoginPage
+    component: HistoricPage
   }
 ];
 
@@ -22,8 +22,9 @@ const routes: Routes = [
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes),
-    MatInputModule
+    MatSelectModule,
+    MatCardModule
   ],
-  declarations: [LoginPage]
+  declarations: [HistoricPage]
 })
-export class LoginPageModule {}
+export class HistoricPageModule {}

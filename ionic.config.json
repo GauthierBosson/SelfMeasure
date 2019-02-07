@@ -1,5 +1,7 @@
 {
   "name": "selfMeasure",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

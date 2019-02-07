@@ -7,6 +7,9 @@ import { IonicModule } from '@ionic/angular';
 
 import { ProfilPage } from './profil.page';
 
+import { MatCardModule } from '@angular/material/card';
+import { MatInputModule } from '@angular/material/input';
+
 const routes: Routes = [
   {
     path: '',
@@ -19,6 +22,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    MatCardModule,
+    MatInputModule,
     RouterModule.forChild(routes)
   ],
   declarations: [ProfilPage]

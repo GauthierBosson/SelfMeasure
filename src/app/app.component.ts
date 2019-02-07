@@ -19,6 +19,16 @@ export class AppComponent {
       title: 'Profil',
       url: '/profil',
       icon: 'person'
+    },
+    {
+      title: 'Historique',
+      url: '/historic',
+      icon: 'book'
+    },
+    {
+      title: 'Calendrier',
+      url: '/calendar',
+      icon: 'calendar'
     }
   ];
 
