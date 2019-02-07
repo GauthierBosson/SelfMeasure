@@ -1,19 +1,20 @@
-<ion-header>
-    <ion-toolbar>
+<ion-header no-border margin-bottom>
+    <ion-toolbar style="background-color: blue">
         <ion-buttons slot="start">
             <ion-menu-button></ion-menu-button>
         </ion-buttons>
-        <ion-title>
-            Accueil
-        </ion-title>
     </ion-toolbar>
+    <mat-card class=".mat-elevation-z0">
+        <mat-card-title text-center>Votre Accueil</mat-card-title>
+        <mat-card-subtitle text-center>Bienvenue chez vous !</mat-card-subtitle>
+    </mat-card>
 </ion-header>
 
 <ion-content>
-    <mat-card margin >
+    <mat-card margin text-center class=".mat-elevation-z0">
         <circle-progress
-                [percent]="85"
-                [radius]="50"
+                [percent]="50"
+                [radius]="80"
                 [outerStrokeWidth]="10"
                 [outerStrokeColor]="'#4882c2'"
                 [innerStrokeColor]="'#e7e8ea'"
@@ -27,7 +28,7 @@
                     Aliments
                 </mat-panel-title>
                 <mat-panel-description>
-                    200kcal
+                    200Kcal
                 </mat-panel-description>
             </mat-expansion-panel-header>
 
@@ -54,13 +55,13 @@
             </mat-expansion-panel-header>
 
             <mat-form-field>
-                <input matInput type="text" placeholder="Choisir un aliment" />
+                <input matInput type="text" placeholder="Poids" />
             </mat-form-field>
             <mat-form-field>
-                <input matInput type="text" placeholder="Choisir un aliment" />
+                <input matInput type="text" placeholder="Taille" />
             </mat-form-field>
             <ion-item lines="none">
-                <button mat-raised-button color="primary">Primary</button>
+                <button mat-raised-button color="primary">Calculer</button>
             </ion-item>
         </mat-expansion-panel>
 </ion-content>
