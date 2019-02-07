@@ -5,7 +5,7 @@
         </ion-buttons>
     </ion-toolbar>
     <mat-card class=".mat-elevation-z0">
-        <mat-card-title text-center>Votre Accueil</mat-card-title>
+        <mat-card-title text-center>Bienvenue !</mat-card-title>
         <mat-card-subtitle text-center>Bienvenue chez vous !</mat-card-subtitle>
     </mat-card>
 </ion-header>
@@ -22,7 +22,7 @@
                 [animationDuration]="300"
         ></circle-progress>
     </mat-card>
-        <mat-expansion-panel>
+        <!--<mat-expansion-panel>
             <mat-expansion-panel-header>
                 <mat-panel-title>
                     Aliments
@@ -63,5 +63,50 @@
             <ion-item lines="none">
                 <button mat-raised-button color="primary">Calculer</button>
             </ion-item>
-        </mat-expansion-panel>
+        </mat-expansion-panel>-->
+    <!--<ion-grid>
+        <ion-row>
+            <div>
+                <p>Aliments</p>
+            </div>
+        </ion-row>
+    </ion-grid>-->
+    <mat-card style="border-radius: 0 !important; margin-bottom: 10px; background-color: #3699ec" (click)="goToAlimentPage()">
+        <ion-grid>
+            <ion-row>
+                <ion-col text-center style="line-height: 27px; color: white">
+                    Aliments
+                </ion-col>
+                <ion-col text-center style="line-height: 27px; color: white">
+                    1000Kcal
+                </ion-col>
+                <ion-col text-center><ion-icon name="arrow-round-forward" style="font-size: 30px; color: white"></ion-icon></ion-col>
+            </ion-row>
+        </ion-grid>
+    </mat-card>
+    <mat-card style="border-radius: 0 !important; margin-bottom: 10px; background-color: #3699ec">
+        <ion-grid>
+            <ion-row>
+                <ion-col text-center style="line-height: 27px; color: white">
+                    Nombre de pas
+                </ion-col>
+                <ion-col text-center style="line-height: 27px; color: white">
+                    1000
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+    </mat-card>
+    <mat-card style="border-radius: 0 !important; margin-bottom: 10px; background-color: #3699ec">
+        <ion-grid>
+            <ion-row>
+                <ion-col text-center style="line-height: 27px; color: white;">
+                    IMC : 20
+                </ion-col>
+                <ion-col text-center style="line-height: 27px; color: white;" >
+                    Bonne santé
+                </ion-col>
+                <ion-col text-center><ion-icon name="arrow-round-forward" style="font-size: 30px; color: white"></ion-icon></ion-col>
+            </ion-row>
+        </ion-grid>
+    </mat-card>
 </ion-content>

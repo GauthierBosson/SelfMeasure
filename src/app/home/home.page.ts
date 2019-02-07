@@ -11,8 +11,8 @@ export class HomePage implements OnInit {
 
   constructor(private router: Router) {}
 
-  go() {
-
+  goToAlimentPage() {
+    this.router.navigateByUrl('/add-aliment');
   }
 
   ngOnInit() {}

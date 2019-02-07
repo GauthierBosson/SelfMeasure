@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Historique',
       url: '/historic',
       icon: 'book'
+    },
+    {
+      title: 'Calendrier',
+      url: '/calendar',
+      icon: 'calendar'
     }
   ];
 

@@ -5,13 +5,12 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { AddAlimentPage } from './add-aliment.page';
-import { MatCardModule } from '@angular/material';
+import { CalendarPage } from './calendar.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: AddAlimentPage
+    component: CalendarPage
   }
 ];
 
@@ -20,9 +19,8 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    MatCardModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [AddAlimentPage]
+  declarations: [CalendarPage]
 })
-export class AddAlimentPageModule {}
+export class CalendarPageModule {}
