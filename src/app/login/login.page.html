@@ -5,19 +5,17 @@
   </ion-card-header>
   <ion-card-content>
     <ion-item>
-      <ion-input placeholder="Email"></ion-input>
+      <ion-input placeholder="Email" [(ngModel)]="email"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Mot de passe"></ion-input>
+      <ion-input placeholder="Mot de passe" [(ngModel)]="password"></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-button expand="full" size="large">Connexion</ion-button>
+      <ion-button expand="full" size="large" (click)="login(email, password)">Connexion</ion-button>
     </ion-item>
     <ion-item lines="none">
       <ion-button expand="full" size="large" (click)="go()">S'inscrire</ion-button>
     </ion-item>
-    <!--<mat-form-field>
-      <input matInput placeholder="Email"/>
-    </mat-form-field>-->
+
   </ion-card-content>
 </ion-content>

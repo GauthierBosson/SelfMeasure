@@ -12,6 +12,9 @@ import { ImcChartComponent } from './component/imc-chart/imc-chart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 
+import { HttpClientModule } from '@angular/common/http';
+import { IonicStorageModule } from '@ionic/storage';
+
 @NgModule({
   declarations: [AppComponent, ImcChartComponent],
   entryComponents: [],
@@ -21,7 +24,9 @@ import { MatButtonModule, MatCheckboxModule } from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatButtonModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    HttpClientModule,
+    IonicStorageModule.forRoot()
   ],
   providers: [
     StatusBar,
