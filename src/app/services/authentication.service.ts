@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Storage } from '@ionic/storage';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -11,12 +12,13 @@ export class AuthenticationService {
 
   token;
 
-  constructor(private httpClient: HttpClient, private storage: Storage, private helper: JwtHelperService) { }
+  constructor(private httpClient: HttpClient, private storage: Storage, private helper: JwtHelperService, private router: Router) { }
 
   login(email: string, password: string) {
     return this.httpClient.post<{token: string}>('http://127.0.0.1:8000/login_check', {'username': email, 'password': password})
       .pipe(tap(res => {
       this.storage.set('access_token', res.token);
+      this.router.navigate(['/home']);
     })).subscribe();
   }
 
