@@ -4,9 +4,6 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { AuthenticationService } from './services/authentication.service';
-import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
@@ -19,28 +16,16 @@ export class AppComponent {
       icon: 'home'
     },
     {
-      title: 'Profil',
-      url: '/profil',
-      icon: 'person'
-    },
-    {
-      title: 'Historique',
-      url: '/historic',
-      icon: 'book'
-    },
-    {
-      title: 'Calendrier',
-      url: '/calendar',
-      icon: 'calendar'
+      title: 'List',
+      url: '/list',
+      icon: 'list'
     }
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar,
-    private authService: AuthenticationService,
-    private router: Router
+    private statusBar: StatusBar
   ) {
     this.initializeApp();
   }
@@ -50,10 +35,5 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-  }
-
-  logout() {
-    this.authService.logout();
-    this.router.navigate(['/login']);
   }
 }
