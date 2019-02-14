@@ -2,13 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { tap } from 'rxjs/operators';
 import { Storage } from '@ionic/storage';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService {
 
-  constructor(private httpClient: HttpClient, private storage: Storage) { }
+  token;
+
+  constructor(private httpClient: HttpClient, private storage: Storage, private helper: JwtHelperService) { }
 
   login(email: string, password: string) {
     return this.httpClient.post<{token: string}>('http://127.0.0.1:8000/login_check', {'username': email, 'password': password})
@@ -31,5 +34,15 @@ export class AuthenticationService {
     return this.storage.get('access_token') !==  null;
   }
 
+  getToken(): Promise<any> {
+    return this.storage.get('access_token');
+  }
 
+  async checkToken(): Promise<boolean> {
+
+    this.token = await this.helper.tokenGetter();
+    console.log(this.token);
+
+    return !this.helper.isTokenExpired(this.token);
+  }
 }
