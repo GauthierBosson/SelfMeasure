@@ -13,6 +13,6 @@ export class RegisterService {
     const formData = new FormData();
     formData.append('_username', email);
     formData.append('_password', password);
-    this.http.post('http://localhost:8000/register', formData).subscribe();
+    this.http.post('http://localhost:8000/register', formData, {responseType: 'text'}).subscribe();
   }
 }
