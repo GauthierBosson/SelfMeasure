@@ -19,7 +19,9 @@ const routes: Routes = [
   { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule', canActivate: [AuthenticationGuard] },
   { path: 'historic', loadChildren: './historic/historic.module#HistoricPageModule', canActivate: [AuthenticationGuard] },
   { path: 'add-aliment', loadChildren: './add-aliment/add-aliment.module#AddAlimentPageModule', canActivate: [AuthenticationGuard] },
-  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule', canActivate: [AuthenticationGuard]  }
+  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule', canActivate: [AuthenticationGuard]  },
+  { path: 'calendar-detail', loadChildren: './calendar-detail/calendar-detail.module#CalendarDetailPageModule', canActivate: [AuthenticationGuard] }
+
 ];
 
 @NgModule({

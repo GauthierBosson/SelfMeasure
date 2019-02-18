@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>calendarDetail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label text-wrap>
+        <ion-text color="primary">
+          <h3>Repas de la journée</h3>
+        </ion-text>
+        <ion-text color="secondary">
+          <div [innerHTML]="resume"></div>
+          <p> Vous avez effectuer {{ podometer }} pas et ainsi consommé {{ kcalBurn }} kcal ce jour</p>
+          <p> Vous avez assimilé au au total {{ total }} kcal cette journée</p>
+        </ion-text>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
