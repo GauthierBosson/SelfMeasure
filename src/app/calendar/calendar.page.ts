@@ -25,11 +25,22 @@ export class CalendarPage {
     this.number = toNumbers(this.date[1]);
     this.thisday = moment().format('dddd');
 
-    this.calendar = '';
+    this.calendar = '\n' +
+        '  <div class="row no-gutters">\n' +
+        '    <div class="col-2"></div>\n' +
+        '    <div class="col-1 calendar">D</div>\n' +
+        '    <div class="col-1 calendar">L</div>\n' +
+        '    <div class="col-1 calendar">M</div>\n' +
+        '    <div class="col-1 calendar">M</div>\n' +
+        '    <div class="col-1 calendar">J</div>\n' +
+        '    <div class="col-1 calendar">V</div>\n' +
+        '    <div class="col-1 calendar">S</div>\n' +
+        '    <div class="col-2"></div>\n' +
+        '  </div>';
     this.lastdayofmonth = moment().endOf('month').fromNow();
     this.date = this.lastdayofmonth.split(' ');
     this.dayofmonth = toNumbers(this.date[1]);
-    this.dayofmonth[0] += this.number[0] - 1;
+    this.dayofmonth[0] += this.number[0];
     this.dayOfWeekFistDay = this.calendardayone(this.dayOfWeek, this.thisday, this.number[0]);
     this.calendarloop();
   }
