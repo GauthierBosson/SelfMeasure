@@ -1,0 +1,26 @@
+
+
+.calendar
+{
+  padding-right: 2px;
+  padding-left: 2px;
+  text-align: center;
+}
+
+.thisday
+{
+  background-color: lightgreen;
+  border: 1px solid limegreen;
+}
+
+.otherday
+{
+  background-color: lightblue;
+  border: 1px solid dodgerblue;
+}
+
+.noday
+{
+  background-color: lightgray;
+  border: 1px solid gray;
+}
