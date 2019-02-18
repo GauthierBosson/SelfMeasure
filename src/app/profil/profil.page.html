@@ -1,0 +1,38 @@
+<ion-header no-border>
+  <ion-toolbar style="background-color: blue">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  <mat-card class=".mat-elevation-z0">
+    <mat-card-title text-center>Votre profil</mat-card-title>
+    <mat-card-subtitle text-center>Editez vos informations ici</mat-card-subtitle>
+  </mat-card>
+</ion-header>
+
+<ion-content padding>
+  <mat-card margin-bottom>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Nom complet" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="adresse email" />
+    </mat-form-field>
+  </mat-card>
+  <mat-card margin-bottom>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Poids" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Taille" />
+    </mat-form-field>
+  </mat-card>
+  <mat-card>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Mot de passe" />
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Confirmation du mot de passe" />
+    </mat-form-field>
+  </mat-card>
+</ion-content>

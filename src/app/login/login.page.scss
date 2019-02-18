@@ -1,0 +1,33 @@
+ion-item {
+  width: 75%;
+  padding: 10px 0;
+}
+
+ion-card-title {
+  color: white;
+}
+
+ion-card-subtitle {
+  color: whitesmoke;
+}
+
+ion-button {
+  width: 100%;
+}
+
+ion-card-content {
+  height: 67%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-card-header {
+  background-color: #247cff;
+  height: 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}

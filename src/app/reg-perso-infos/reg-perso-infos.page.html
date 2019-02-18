@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Informations personnelles
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card-header>Et maintenant, on aimerait en savoir plus !</ion-card-header>
+  <ion-card-content #form>
+    <ion-item>
+      <ion-label>Sexe</ion-label>
+      <ion-select placeholder="Sélectionnez">
+        <ion-select-option value="homme">Homme</ion-select-option>
+        <ion-select-option value="femme">Femme</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date de naissance</ion-label>
+      <ion-datetime display-format="MMM DD, YYYY"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Taille"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input placeholder="Poids"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button expand="full" size="large" (click)="go()">Valider</ion-button>
+    </ion-item>
+  </ion-card-content>
+</ion-content>
