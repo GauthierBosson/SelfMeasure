@@ -26,10 +26,6 @@ export class RegPersoInfosPage implements OnInit {
     this.regService.addPersonalInfos(gender, birthdate, intHeight, intWeight);
   }
 
-  userIMC() {
-
-  }
-
   ngOnInit() {
   }
 

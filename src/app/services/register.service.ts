@@ -26,7 +26,9 @@ export class RegisterService {
       'Content-type': 'application/json',
       'Authorization': `Bearer ${rawToken}`
     });
-    const data = JSON.stringify({birthdate: birthdate, height: height, gender: gender, imc: 26});
+    const imc = this.addUserImc(height, weight);
+    console.log(imc);
+    const data = JSON.stringify({birthdate: birthdate, height: height, gender: gender, imc: imc});
     this.http.put(`http://localhost:8000/api/users/${token.id}`, data, {headers: header}).subscribe();
     const date = new Date();
     const month = date.getUTCMonth() + 1;
@@ -36,6 +38,13 @@ export class RegisterService {
     const dataw = JSON.stringify({value: weight, date: newDate});
     this.http.post('http://localhost:8000/api/weights', dataw, {headers: header}).subscribe();
     this.router.navigateByUrl('/home');
+  }
+
+  addUserImc(height: number, weight: number) {
+    const imcH = height / 100;
+    const imcHSquare = Math.pow(imcH, 2);
+    const imc = weight / imcHSquare;
+    return parseFloat(imc.toFixed(2));
   }
 
   /*addWeightToUser(weight: string) {
