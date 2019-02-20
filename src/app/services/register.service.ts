@@ -19,7 +19,7 @@ export class RegisterService {
     this.http.post('http://localhost:8000/register', formData, {responseType: 'text'}).subscribe();
   }
 
-  async addPersonalInfos(gender: string, birthdate: any, height: number) {
+  async addPersonalInfos(gender: string, birthdate: any, height: number, weight: number) {
     const rawToken = await this.helper.tokenGetter();
     const token = jwt_decode(rawToken);
     console.log(gender);
@@ -30,6 +30,20 @@ export class RegisterService {
     });
     const data = JSON.stringify({birthdate: birthdate, height: height, gender: gender, imc: 26});
     this.http.put(`http://localhost:8000/api/users/${token.id}`, data, {headers: header}).subscribe();
+    const date = new Date();
+    const month = date.getUTCMonth() + 1;
+    const day = date.getUTCDate();
+    const year = date.getUTCFullYear();
+    const newDate = year + '-' + month + '-' + day;
+    const dataw = JSON.stringify({value: weight, date: newDate});
+    console.log(weight);
+    this.http.post('http://localhost:8000/api/weights', dataw, {headers: header}).subscribe();
+    this.router.navigateByUrl('/home');
   }
+
+  /*addWeightToUser(weight: string) {
+    const weight = JSON.stringify({weight: weight});
+    this.http.put('http://localhost:8000/api/weights', weight)
+  }*/
 
 }

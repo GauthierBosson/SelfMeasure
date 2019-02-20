@@ -20,9 +20,11 @@ export class RegPersoInfosPage implements OnInit {
     this.router.navigateByUrl('/home');
   }
 
-  addPersonalInfos(gender: string, birthdate: string, height: number) {
+  addPersonalInfos(gender: string, birthdate: string, height: number, weight: number) {
     const intHeight = parseInt(height);
-    this.regService.addPersonalInfos(gender, birthdate, intHeight);
+    const intWeight = parseInt(weight);
+    console.log(intWeight);
+    this.regService.addPersonalInfos(gender, birthdate, intHeight, intWeight);
   }
 
   userIMC() {
