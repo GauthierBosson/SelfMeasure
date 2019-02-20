@@ -1,8 +1,5 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button></ion-menu-button>
-    </ion-buttons>
     <ion-title>
       Informations personnelles
     </ion-title>
@@ -13,24 +10,24 @@
   <ion-card-header>Et maintenant, on aimerait en savoir plus !</ion-card-header>
   <ion-card-content #form>
     <ion-item>
-      <ion-label>Sexe</ion-label>
-      <ion-select placeholder="Sélectionnez">
+      <ion-label>Genre</ion-label>
+      <ion-select placeholder="Sélectionnez" [(ngModel)]="gender">
         <ion-select-option value="homme">Homme</ion-select-option>
         <ion-select-option value="femme">Femme</ion-select-option>
       </ion-select>
     </ion-item>
     <ion-item>
       <ion-label>Date de naissance</ion-label>
-      <ion-datetime display-format="MMM DD, YYYY"></ion-datetime>
+      <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="birthdate"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Taille"></ion-input>
+      <ion-input placeholder="Taille" [(ngModel)]="height"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Poids"></ion-input>
+      <ion-input placeholder="Poids" [(ngModel)]="weight"></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-button expand="full" size="large" (click)="go()">Valider</ion-button>
+      <ion-button expand="full" size="large" (click)="addPersonalInfos(gender, birthdate, height, weight)">Valider</ion-button>
     </ion-item>
   </ion-card-content>
 </ion-content>
