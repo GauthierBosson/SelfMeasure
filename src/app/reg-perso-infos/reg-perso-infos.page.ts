@@ -11,8 +11,8 @@ export class RegPersoInfosPage implements OnInit {
 
   gender: string;
   birthdate: string;
-  height: number;
-  weight: number;
+  height: string;
+  weight: string;
 
   constructor(private router: Router, private regService: RegisterService) { }
 
@@ -20,10 +20,9 @@ export class RegPersoInfosPage implements OnInit {
     this.router.navigateByUrl('/home');
   }
 
-  addPersonalInfos(gender: string, birthdate: string, height: number, weight: number) {
-    const intHeight = parseInt(height);
-    const intWeight = parseInt(weight);
-    console.log(intWeight);
+  addPersonalInfos(gender: string, birthdate: string, height: string, weight: string) {
+    const intHeight = parseInt(height, 10);
+    const intWeight = parseInt(weight, 10);
     this.regService.addPersonalInfos(gender, birthdate, intHeight, intWeight);
   }
 

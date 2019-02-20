@@ -22,8 +22,6 @@ export class RegisterService {
   async addPersonalInfos(gender: string, birthdate: any, height: number, weight: number) {
     const rawToken = await this.helper.tokenGetter();
     const token = jwt_decode(rawToken);
-    console.log(gender);
-    console.log(birthdate);
     const header = new HttpHeaders({
       'Content-type': 'application/json',
       'Authorization': `Bearer ${rawToken}`
@@ -36,7 +34,6 @@ export class RegisterService {
     const year = date.getUTCFullYear();
     const newDate = year + '-' + month + '-' + day;
     const dataw = JSON.stringify({value: weight, date: newDate});
-    console.log(weight);
     this.http.post('http://localhost:8000/api/weights', dataw, {headers: header}).subscribe();
     this.router.navigateByUrl('/home');
   }
