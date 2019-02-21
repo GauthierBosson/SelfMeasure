@@ -5,7 +5,7 @@
         </ion-buttons>
     </ion-toolbar>
     <mat-card class=".mat-elevation-z0">
-        <mat-card-title text-center>Bienvenue !</mat-card-title>
+        <mat-card-title text-center>Bienvenue, {{user.realname}} !</mat-card-title>
         <mat-card-subtitle text-center>Bienvenue chez vous !</mat-card-subtitle>
     </mat-card>
 </ion-header>
@@ -13,6 +13,7 @@
 <ion-content>
     <mat-card margin text-center class=".mat-elevation-z0">
         <circle-progress
+                [title]="kcalNeeded + ' Kcal'"
                 [percent]="50"
                 [radius]="80"
                 [outerStrokeWidth]="10"
@@ -100,10 +101,28 @@
         <ion-grid>
             <ion-row>
                 <ion-col text-center style="line-height: 27px; color: white;">
-                    IMC : 20
+                    IMC : {{user.imc}}
                 </ion-col>
-                <ion-col text-center style="line-height: 27px; color: white;" >
-                    Bonne santé
+                <ion-col *ngIf="user.imc < 16" text-center style="line-height: 27px; color: white;" >
+                    Anorexie / dénutrition
+                </ion-col>
+                <ion-col *ngIf="user.imc >= 16 && user.imc < 18.5" text-center style="line-height: 27px; color: white;" >
+                    Maigreur
+                </ion-col>
+                <ion-col *ngIf="user.imc >= 18.5 && user.imc < 25" text-center style="line-height: 27px; color: white;" >
+                    Corpulence normale
+                </ion-col>
+                <ion-col *ngIf="user.imc >= 25 && user.imc < 30" text-center style="line-height: 27px; color: white;" >
+                    Surpoids
+                </ion-col>
+                <ion-col *ngIf="user.imc >= 30 && user.imc < 35" text-center style="line-height: 27px; color: white;" >
+                    Obésité modérée
+                </ion-col>
+                <ion-col *ngIf="user.imc >= 35 && user.imc < 40" text-center style="line-height: 27px; color: white;" >
+                    Obésité élevée
+                </ion-col>
+                <ion-col *ngIf="user.imc >= 40" text-center style="line-height: 27px; color: white;" >
+                    Obésité morbide
                 </ion-col>
                 <ion-col text-center><ion-icon name="arrow-round-forward" style="font-size: 30px; color: white"></ion-icon></ion-col>
             </ion-row>
