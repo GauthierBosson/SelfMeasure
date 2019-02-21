@@ -12,7 +12,7 @@ export class HomePage implements OnInit {
   constructor(private router: Router) {}
 
   goToAlimentPage() {
-    this.router.navigateByUrl('/add-aliment');
+    this.router.navigateByUrl('/add-food');
   }
 
   ngOnInit() {}

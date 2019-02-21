@@ -24,6 +24,11 @@ export class AppComponent {
       icon: 'person'
     },
     {
+      title: 'Nutrition',
+      url: '/news',
+      icon: 'nutrition'
+    },
+    {
       title: 'Historique',
       url: '/historic',
       icon: 'book'

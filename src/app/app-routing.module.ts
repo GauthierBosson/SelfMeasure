@@ -18,8 +18,11 @@ const routes: Routes = [
   { path: 'reg-perso-infos', loadChildren: './reg-perso-infos/reg-perso-infos.module#RegPersoInfosPageModule' },
   { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule', canActivate: [AuthenticationGuard] },
   { path: 'historic', loadChildren: './historic/historic.module#HistoricPageModule', canActivate: [AuthenticationGuard] },
-  { path: 'add-aliment', loadChildren: './add-aliment/add-aliment.module#AddAlimentPageModule', canActivate: [AuthenticationGuard] },
-  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule', canActivate: [AuthenticationGuard] }
+  { path: 'calendar', loadChildren: './calendar/calendar.module#CalendarPageModule', canActivate: [AuthenticationGuard] },
+  { path: 'news', loadChildren: './nutrition/news/news.module#NewsPageModule' },
+  { path: 'article/:id', loadChildren: './nutrition/article/article.module#ArticlePageModule' },
+  { path: 'food-detail', loadChildren: './food-detail/food-detail.module#FoodDetailPageModule' },
+  { path: 'add-food', loadChildren: './add-food/add-food.module#AddFoodPageModule', canActivate: [AuthenticationGuard] }
 ];
 
 @NgModule({

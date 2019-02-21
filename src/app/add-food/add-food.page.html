@@ -1,0 +1,35 @@
+<ion-content padding>
+  <ion-card class="welcome-card">
+    <ion-img src="/assets/img/healthy-food-2.jpg"></ion-img>
+    <ion-card-header>
+      <ion-card-subtitle>Manger bien, manger mieux!</ion-card-subtitle>
+      <ion-card-title>Commencer à utiliser Self-Measure</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-grid style="height: 83%">
+    <ion-row style="height: 25%">
+      <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)">
+        <ion-select-option value="">All</ion-select-option>
+        <ion-select-option value="movie">Movie</ion-select-option>
+        <ion-select-option value="series">Series</ion-select-option>
+        <ion-select-option value="episode">Episode</ion-select-option>
+      </ion-searchbar>
+
+      <ion-list>
+
+        <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/', 'recipe_id', item.recipe_id]">
+          <ion-avatar slot="start">
+            <img [src]="item.image_url" *ngIf="item.image_url != 'N/A'">
+          </ion-avatar>
+
+          <ion-label text-wrap>
+            <h3>{{ item.title }}</h3>
+            {{ item.publisher }}
+          </ion-label>
+
+        </ion-item>
+
+      </ion-list>
+    </ion-row>
+  </ion-grid>
+</ion-content>
