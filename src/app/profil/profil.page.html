@@ -11,25 +11,26 @@
 </ion-header>
 
 <ion-content padding>
-  <mat-card margin-bottom>
-    <mat-form-field>
-      <input matInput type="text" placeholder="Nom complet" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" placeholder="adresse email" />
-    </mat-form-field>
-  </mat-card>
-  <mat-card margin-bottom>
-    <mat-form-field>
-      <input matInput type="text" placeholder="Poids" />
-    </mat-form-field>
-  </mat-card>
-  <mat-card>
-    <mat-form-field>
-      <input matInput type="text" placeholder="Mot de passe" />
-    </mat-form-field>
-    <mat-form-field>
-      <input matInput type="text" placeholder="Confirmation du mot de passe" />
-    </mat-form-field>
-  </mat-card>
+  <ion-card padding>
+    <ion-card-header>
+      <ion-card-subtitle>Modifiez vos infos personnelles</ion-card-subtitle>
+    </ion-card-header>
+    <ion-item>
+      <ion-input type="text" placeholder="Prénom"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button>Modifier</ion-button>
+    </ion-item>
+  </ion-card>
+  <ion-card padding>
+    <ion-card-header>
+      <ion-card-subtitle>Ajoutez un poids</ion-card-subtitle>
+    </ion-card-header>
+    <ion-item>
+      <ion-input type="number" placeholder="poids" [(ngModel)]="weight"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-button (click)="addWeight(weight)">Ajouter</ion-button>
+    </ion-item>
+  </ion-card>
 </ion-content>
