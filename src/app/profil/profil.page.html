@@ -16,10 +16,10 @@
       <ion-card-subtitle>Modifiez vos infos personnelles</ion-card-subtitle>
     </ion-card-header>
     <ion-item>
-      <ion-input type="text" placeholder="Prénom"></ion-input>
+      <ion-input type="text" placeholder="Prénom" [(ngModel)]="realname"></ion-input>
     </ion-item>
     <ion-item lines="none">
-      <ion-button>Modifier</ion-button>
+      <ion-button (click)="updateInfo(realname)">Modifier</ion-button>
     </ion-item>
   </ion-card>
   <ion-card padding>

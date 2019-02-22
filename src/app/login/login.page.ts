@@ -21,6 +21,7 @@ export class LoginPage implements OnInit {
 
   login(email: string, password: string) {
     this.auth.login(email, password);
+    this.router.navigateByUrl('/home');
   }
 
   ngOnInit() {

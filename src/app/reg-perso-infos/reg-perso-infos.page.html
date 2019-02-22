@@ -21,10 +21,10 @@
       <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="birthdate"></ion-datetime>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Taille" [(ngModel)]="height"></ion-input>
+      <ion-input placeholder="Taille (cm)" [(ngModel)]="height"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-input placeholder="Poids" [(ngModel)]="weight"></ion-input>
+      <ion-input placeholder="Poids (kg)" [(ngModel)]="weight"></ion-input>
     </ion-item>
     <ion-item lines="none">
       <ion-button expand="full" size="large" (click)="addPersonalInfos(gender, birthdate, height, weight)">Valider</ion-button>
