@@ -18,7 +18,6 @@ export class AuthenticationService {
     return this.httpClient.post<{token: string}>('http://127.0.0.1:8000/login_check', {'username': email, 'password': password})
       .pipe(tap(res => {
       this.storage.set('access_token', res.token);
-      // this.router.navigate(['/home']);
     })).subscribe();
   }
 
