@@ -8,12 +8,7 @@
   </ion-card>
   <ion-grid style="height: 83%">
     <ion-row style="height: 25%">
-      <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)">
-        <ion-select-option value="">All</ion-select-option>
-        <ion-select-option value="movie">Movie</ion-select-option>
-        <ion-select-option value="series">Series</ion-select-option>
-        <ion-select-option value="episode">Episode</ion-select-option>
-      </ion-searchbar>
+      <ion-searchbar [(ngModel)]="searchTerm" (ionChange)="searchChanged($event)"></ion-searchbar>
 
       <ion-list>
 
